@@ -1,5 +1,6 @@
 package ogloszenia;
 
+import ogloszenia.model.User;
 import org.hibernate.Session;
 
 import ogloszenia.model.Advertisement;
@@ -11,7 +12,9 @@ public class Test {
 		Session s = HibernateUtil.openSession().getSession();
 		
 		Advertisement o  = s.find(Advertisement.class, 1);
+		//User u = s.find(User.class, 1);
 
+		s.close();
 	}
 
 }
